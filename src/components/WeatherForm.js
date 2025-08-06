@@ -34,7 +34,7 @@ const WeatherForm = () => {
                 <div className="alert mt-4" role="alert"
                     style={{ backgroundColor: result.success ? '#d4edda' : '#f8d7da', color: result.success ? '#155724' : '#721c24' }}>
                     {result.data?.city
-                        ? `🌡️ ${result.data.city}: ${result.data.temperature}`
+                        ? `🌡️ The Current Temprature of ${result.data.city} is ${result.data.temperature}`
                         : `💬 ${result.data}`}
                 </div>
             )}
