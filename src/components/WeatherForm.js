@@ -16,6 +16,7 @@ const WeatherForm = () => {
 
     return (
         <div className="container mt-5">
+            <p className="text-center mb-4">🙋🏻‍♂️ Atul's Personal AI Agent for Real-time Temperature of any city OR Ask anything</p>
             <h2 className="text-center mb-4">🌤️ Real-time Weather Temperature</h2>
             <form onSubmit={handleSubmit} className="text-center">
                 <input
@@ -26,7 +27,7 @@ const WeatherForm = () => {
                     onChange={(e) => setPrompt(e.target.value)}
                 />
                 <button type="submit" className="btn btn-primary" disabled={loading}>
-                    {loading ? 'Fetching...' : 'Get Real-Time Temperature'}
+                    {loading ? 'Fetching...' : 'Get AI Response'}
                 </button>
             </form>
             {result && (
