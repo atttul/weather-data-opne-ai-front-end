@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getWeatherData } from '../api';
+import * as api from '../api';
 
 const WeatherForm = () => {
     const [prompt, setPrompt] = useState('');
@@ -9,7 +9,7 @@ const WeatherForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        const data = await getWeatherData(prompt);
+        const data = await api.getWeatherData(prompt);
         setResult(data);
         setLoading(false);
     };
